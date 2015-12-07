@@ -1,6 +1,6 @@
 Template.home.onCreated(function() {
   var instance = this;
-  Tracker.autorun(function() {
+  instance.autorun(function() {
     var page = FlowRouter.getParam('page');
     if (page) {
       instance.subscribe('tournamentsFromPage', page);

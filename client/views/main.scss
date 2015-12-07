@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   background-color: $background;
   background-image: url('/img/stardust.png');
   color: #fff;
@@ -45,3 +45,4 @@ body {
 @import 'mainHeader/mainHeader';
 @import 'tournamentList/tournamentList';
 @import 'tournamentPagination/tournamentPagination';
+@import 'register/register.scss';

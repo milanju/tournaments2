@@ -8,6 +8,14 @@
   background-color: $background;
 }
 
+.nav .open a, .nav .open a:hover, .nav .open a:focus {
+  background-color: $background;
+}
+
+.nav .open .dropdown-menu a {
+  background-color: #eee;
+}
+
 .navbar-brand {
   color: #fff;
   font-weight: 600;

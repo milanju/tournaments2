@@ -34,7 +34,7 @@ Template.tournamentPagination.events({
       if (!page) {
         page = 0;
       }
-      FlowRouter.go('/' + page);
+      FlowRouter.go('/h/' + page);
     }
   },
   'click #paginate-right': function(event) {
@@ -44,13 +44,13 @@ Template.tournamentPagination.events({
       if (!page) {
         page = 2;
       }
-      FlowRouter.go('/' + page);
+      FlowRouter.go('/h/' + page);
     }
   },
   'click .pagination__btn': function(event) {
     event.preventDefault();
     var page = event.target.innerHTML;
-    FlowRouter.go('/' + page);
+    FlowRouter.go('/h/' + page);
   },
   'click .pagination__btn--jump': function(event) {
     $('.tournament-pagination__jump').toggle();
@@ -58,7 +58,7 @@ Template.tournamentPagination.events({
   'submit #tournament-pagination__jump__form': function(event) {
     event.preventDefault();
     var page = event.currentTarget[0].value;
-    FlowRouter.go('/' + page);
+    FlowRouter.go('/h/' + page);
     event.currentTarget[0].value = '';
     $('.tournament-pagination__jump').toggle();
   }

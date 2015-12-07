@@ -1,0 +1,45 @@
+<template name="tournamentList">
+  <div class="row tournament-list">
+    {{#each tournaments}}
+      <div class="col-xs-12 col-sm-6 col-lg-4">
+        <div class="card tournament-list__card">
+          <h3 class="tournament-list__title">{{title}}</h3>
+          <table>
+            <tr>
+              <td class="tournament-list__td">
+                Start in:
+              </td>
+              <td>
+                {{timeUntil date}}
+              </td>
+            </tr>
+            <tr>
+              <td class="tournament-list__td">
+                Date:
+              </td>
+              <td class="tournament-list__td">
+                {{formatDate date}}
+              </td>
+            </tr>
+            <tr>
+              <td class="tournament-list__td">
+                Server:
+              </td>
+              <td class="tournament-list__td">
+                {{server}}
+              </td>
+            </tr>
+            <tr>
+              <td class="tournament-list__td">
+                Participants:
+              </td>
+              <td class="tournament-list__td">
+                {{participants.length}}
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</template>

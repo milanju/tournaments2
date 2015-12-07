@@ -1,0 +1,57 @@
+<template name="tournamentPagination">
+  <nav class="tournament-pagination">
+    <ul class="pagination">
+      <li>
+        <a href="" id="paginate-left" class="{{disabled 1 currentPage}}" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li><a href="" class="pagination__btn {{active 1 currentPage}}">1</a></li>
+      {{#if greaterThan pagesCount 1}}
+        {{#if greaterThan currentPage 3}}
+          <li>
+            <a href="" class="pagination__btn--jump">...</a>
+          </li>
+        {{else}}
+          <li><a href="" class="pagination__btn {{active 2 currentPage}}">2</a></li>
+        {{/if}}
+        {{#if greaterThan pagesCount 2}}
+          {{#if smallerThan (minus pagesCount currentPage) 3}}
+            <li><a href="" class="pagination__btn {{active (minus pagesCount 2) currentPage}}">{{minus pagesCount 2}}</a></li>
+          {{else}}
+              {{#if greaterThan currentPage 3}}
+                <li><a href="" class="pagination__btn {{active}}">{{currentPage}}</a></li>
+              {{else}}
+                <li><a href="" class="pagination__btn {{active 3 currentPage}}">3</a></li>
+              {{/if}}
+          {{/if}}
+          {{#if greaterThan pagesCount 3}}
+            {{#if smallerThan (minus pagesCount currentPage) 3}}
+              <li><a href="" class="pagination__btn {{active (minus pagesCount 1) currentPage}}">{{minus pagesCount 1}}</a></li>
+            {{else}}
+              {{#if greaterThan (minus pagesCount currentPage) 2}}
+                <li><a href="" class="pagination__btn--jump">...</a></li>
+              {{else}}
+                <li><a href="" class="pagination__btn {{active 4 currentPage}}">4</a></li>
+              {{/if}}
+            {{/if}}
+            {{#if greaterThan pagesCount 4}}
+              <li><a href="" class="pagination__btn {{active pagesCount currentPage}}">{{pagesCount}}</a></li>
+            {{/if}}
+          {{/if}}
+        {{/if}}
+      {{/if}}
+      <li>
+        <a href="" id="paginate-right" class="{{disabled pagesCount currentPage}}">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+      <div class="tournament-pagination__jump">
+        <form id="tournament-pagination__jump__form" class="form-inline">
+          <input type="text" class="form-control tournament-pagination__jump__form__page">
+          <button type="submit" class="btn btn-primary">go!</button>
+        </form>
+      </div>
+    </ul>
+  </nav>
+</template>

@@ -1,0 +1,18 @@
+.navbar {
+  background-color: #181a1f;
+  border-radius: 0;
+  font-weight: 600;
+}
+
+.navbar li a:hover, .navbar li a:focus {
+  background-color: $background;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-weight: 600;
+}
+
+.icon-bar {
+  background-color: #fff;
+}

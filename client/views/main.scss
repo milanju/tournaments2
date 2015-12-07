@@ -1,0 +1,47 @@
+// variables
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$border-radius-base: 2px;
+
+$input-height-base: 32px;
+
+$brand-primary: #ef5350;
+$brand-secondary: #1a1d32;
+
+$background: #2e2f3a;
+$dark-grey: #212121;
+$black-blue: #181a1f;
+$dark-blue: #1c1e24;
+$deep-purple: #311b92;
+$blue-grey-dark: #263238;
+$blue-grey-light: #eceff1;
+
+// bootstrap
+@import '{reywood:bootstrap3-sass}/bootstrap';
+
+// main style
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: $background;
+  background-image: url('/img/stardust.png');
+  color: #fff;
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  background-color: $dark-blue;
+  color: $blue-grey-light;
+  border-radius: $border-radius-base;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+}
+
+// custom imports
+@import 'mainFooter/mainFooter';
+@import 'mainHeader/mainHeader';
+@import 'tournamentList/tournamentList';
+@import 'tournamentPagination/tournamentPagination';

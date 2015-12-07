@@ -1,0 +1,42 @@
+.tournament-pagination {
+  text-align: center;
+}
+
+.pagination {
+  position: relative;
+}
+
+.pagination li a, .pagination li a:focus {
+  background-color: $dark-blue;
+  border-color: $dark-blue;
+}
+
+.pagination li a:hover{
+  background-color: $background;
+  border-color: $dark-blue;
+}
+
+.pagination li a.pagination__btn--active {
+  background-color: $background;
+  font-weight: 600;
+}
+
+.pagination li a.pagination__btn--disabled {
+  color: #aaa;
+}
+
+.tournament-pagination__jump {
+  display: none;
+  z-index: 10;
+  position: absolute;
+  bottom: -40px;
+  height: 40px;
+  width: 100%;
+  left: 0;
+  //padding: 4px;
+  background-color: $dark-blue;
+}
+
+.tournament-pagination__jump__form__page {
+  min-width: 100px;
+}

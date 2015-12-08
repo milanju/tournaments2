@@ -1,0 +1,11 @@
+.tournament-list__tools {
+  z-index: 100;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.tournament-list__tools__btn {
+  color: $blue-grey-light;
+  margin: 0 3px;
+}

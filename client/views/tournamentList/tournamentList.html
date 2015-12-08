@@ -2,42 +2,75 @@
   <div class="row tournament-list">
     {{#each tournaments}}
       <div class="col-xs-12 col-sm-6 col-lg-4">
-        <div class="card tournament-list__card">
-          <h3 class="tournament-list__title">{{title}}</h3>
-          <table>
-            <tr>
-              <td class="tournament-list__td">
-                Start in:
-              </td>
-              <td>
-                {{timeUntil date}}
-              </td>
-            </tr>
-            <tr>
-              <td class="tournament-list__td">
-                Date:
-              </td>
-              <td class="tournament-list__td">
-                {{formatDate date}}
-              </td>
-            </tr>
-            <tr>
-              <td class="tournament-list__td">
-                Server:
-              </td>
-              <td class="tournament-list__td">
-                {{server}}
-              </td>
-            </tr>
-            <tr>
-              <td class="tournament-list__td">
-                Participants:
-              </td>
-              <td class="tournament-list__td">
-                {{participants.length}}
-              </td>
-            </tr>
-          </table>
+        <a class="tournament-list__link" href="{{getLink isLink slug _id link}}" target="{{target isLink}}">
+          <div class="card tournament-list__card">
+            {{> tournamentListTools ownerId=this.userId tournamentId=this._id}}
+            <h3 class="tournament-list__title">{{this.title}}</h3>
+            <table>
+              <tr>
+                <td class="tournament-list__td">
+                  Platform:
+                </td>
+                <td>
+                  {{#if isLink}}
+                    Remote
+                  {{else}}
+                    Tournaments
+                  {{/if}}
+                </td>
+              </tr>
+              <tr>
+                <td class="tournament-list__td">
+                  Start in:
+                </td>
+                <td>
+                  {{timeUntil this.date}}
+                </td>
+              </tr>
+              <tr>
+                <td class="tournament-list__td">
+                  Date:
+                </td>
+                <td class="tournament-list__td">
+                  {{formatDate this.date}}
+                </td>
+              </tr>
+              <tr>
+                <td class="tournament-list__td">
+                  Server:
+                </td>
+                <td class="tournament-list__td">
+                  {{this.region}}
+                </td>
+              </tr>
+              <tr>
+                <td class="tournament-list__td">
+                  Participants:
+                </td>
+                <td class="tournament-list__td">
+                  {{#if isLink}}
+                    N/A
+                  {{else}}
+                    {{this.participants.length}}
+                  {{/if}}
+                </td>
+              </tr>
+            </table>
+          </div>
+        </a>
+      </div>
+      <div class="modal fade" id="modal-delete-{{this._id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Delete Tournament</h4>
+            </div>
+            <div class="modal-body">
+              <button type="button" class="btn btn-danger confirm-delete-tournament" data-dismiss="modal">Delete</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
     {{/each}}

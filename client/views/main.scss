@@ -31,6 +31,10 @@ body {
   color: #fff;
 }
 
+textarea {
+  resize: vertical;
+}
+
 .card {
   margin-bottom: 20px;
   padding: 15px 20px;
@@ -40,9 +44,40 @@ body {
   box-shadow: 0 2px 2px rgba(0,0,0,0.3);
 }
 
+.card__heading {
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.card--medium {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.bootstrap-datetimepicker-widget {
+  color: #000;
+}
+
+.modal-content {
+  background-color: $dark-blue;
+  color: $blue-grey-light;
+  border-radius: $border-radius-base;
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-header .close {
+  color: #fff;
+}
+
 // custom imports
 @import 'mainFooter/mainFooter';
 @import 'mainHeader/mainHeader';
 @import 'tournamentList/tournamentList';
+@import 'tournamentList/tournamentListTools/tournamentListTools';
 @import 'tournamentPagination/tournamentPagination';
 @import 'register/register.scss';
+@import 'userProfile/userProfile.scss';
+

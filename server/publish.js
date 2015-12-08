@@ -1,3 +1,7 @@
+Meteor.publish('user', function(username) {
+  return Meteor.users.find({username: username});
+});
+
 Meteor.publish('tournaments', function() {
   return Tournaments.find();
 });

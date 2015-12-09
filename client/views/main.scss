@@ -72,6 +72,11 @@ textarea {
   color: #fff;
 }
 
+.error-msg {
+  font-weight: 600;
+  color: $brand-danger;
+}
+
 // custom imports
 @import 'mainFooter/mainFooter';
 @import 'mainHeader/mainHeader';

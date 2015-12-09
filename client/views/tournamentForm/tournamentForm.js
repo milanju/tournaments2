@@ -44,7 +44,8 @@ Template.tournamentForm.events({
 
       tournament.link = link;
 
-      Meteor.call('tournamentsCreate', tournament);
+      Meteor.call('tournamentsCreate', tournament, function(err, res) {
+      });
     } else {
       // submit as tournament
       var description = event.target['tournament-form__description'].value;

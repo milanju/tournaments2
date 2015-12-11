@@ -2,6 +2,10 @@ Meteor.publish('user', function(username) {
   return Meteor.users.find({username: username});
 });
 
+Meteor.publish('tournament', function(tournamentId) {
+  return Tournaments.find(tournamentId);
+});
+
 Meteor.publish('tournaments', function() {
   return Tournaments.find();
 });

@@ -80,9 +80,11 @@ textarea {
 // custom imports
 @import 'mainFooter/mainFooter';
 @import 'mainHeader/mainHeader';
+@import 'tournamentListed/tournamentListed';
 @import 'tournamentList/tournamentList';
 @import 'tournamentList/tournamentListTools/tournamentListTools';
 @import 'tournamentPagination/tournamentPagination';
+@import 'tournamentView/tournamentView';
 @import 'register/register.scss';
 @import 'userProfile/userProfile.scss';
 

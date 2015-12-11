@@ -11,11 +11,18 @@ Template.tournamentListTools.helpers({
     } else {
       return false;
     }
+  },
+  editUrl: function() {
+    var tournament = Template.instance().data.tournament;
+    var tournamentSlug = tournament.slug;
+    var tournamentId = tournament._id;
+    console.log(tournament);
+    return '/t/' + tournamentSlug + '/' + tournamentId + '/edit';
   }
 });
 
 Template.tournamentListTools.events({
   'click .delete-tournament': function() {
-    $('#modal-delete-' + Template.instance().data.tournamentId).modal({show: true, backdrop: false});
+    $('#modal-delete-' + Template.instance().data.tournament._id).modal({show: true, backdrop: false});
   }
 });

@@ -2,7 +2,7 @@
   {{#with tournament}}
   <a class="tournament-list__link" href="{{getLink isLink slug _id link}}" target="{{target isLink}}">
     <div class="card tournament-list__card">
-      {{> tournamentListTools ownerId=this.userId tournamentId=this._id}}
+      {{> tournamentListTools ownerId=this.userId tournament=this}}
       <h3 class="tournament-list__title">{{this.title}}</h3>
       <table>
         <tr>

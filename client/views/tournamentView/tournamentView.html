@@ -1,0 +1,17 @@
+<template name="tournamentView">
+  <div class="container">
+    {{#with tournament}}
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          {{> tournamentListed tournament=this}}
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-8">
+          <!--{{> tournamentUserCP tournament=this}}-->
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__heading">{{this.title}}</div>
+      </div>
+    {{/with}}
+  </div>
+</template>

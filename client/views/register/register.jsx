@@ -1,12 +1,12 @@
 Register = React.createClass({
   handleSubmit(event) {
     event.preventDefault();
-    var username = React.findDOMNode(this.refs.username).value;
-    var password = React.findDOMNode(this.refs.password).value;
-    var confirmPassword = React.findDOMNode(this.refs.confirmPassword).value;
+    var username = ReactDOM.findDOMNode(this.refs.username).value;
+    var password = ReactDOM.findDOMNode(this.refs.password).value;
+    var confirmPassword = ReactDOM.findDOMNode(this.refs.confirmPassword).value;
 
     if (password !== confirmPassword) {
-      React.findDOMNode(this.refs.error).innerHTML = "Passwords do not match";
+      ReactDOM.findDOMNode(this.refs.error).innerHTML = "Passwords do not match";
       return;
     }
 
@@ -16,7 +16,7 @@ Register = React.createClass({
     }, (err) => {
       if(err) {
         console.log(err);
-        React.findDOMNode(this.refs.error).innerHTML = err.reason;
+        ReactDOM.findDOMNode(this.refs.error).innerHTML = err.reason;
       } else {
         FlowRouter.go('/');
       }

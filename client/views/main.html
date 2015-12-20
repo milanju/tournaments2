@@ -12,11 +12,13 @@
 </head>
 
 <template name="main">
-  {{> mainHeader}}
+  <div>
+    {{> mainHeader}}
 
-  <div id="content-container">
-    {{> Template.dynamic template=content}}
+    <div id="content-container">
+      {{> Template.dynamic template=content}}
+    </div>
+
+    {{> mainFooter}}
   </div>
-
-  {{> mainFooter}}
 </template>

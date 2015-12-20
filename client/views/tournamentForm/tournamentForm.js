@@ -65,31 +65,50 @@ Template.tournamentForm.events({
   'submit #tournament-form': function(event) {
     event.preventDefault();
     var tournament = {};
-    var isLink = Template.instance().state.get('isLink');
-    var region = event.target['tournament-form__region'].value;
-    var title = event.target['tournament-form__title'].value;
-    var date = new Date(event.target['tournament-form__date'].value);
-    var leagues = event.target['tournament-form__leagues'].value;
+    tournament.isLink = Template.instance().state.get('isLink');
+    tournament.region = event.target['tournament-form__region'].value;
+    tournament.title = event.target['tournament-form__title'].value;
+    tournament.date = new Date(event.target['tournament-form__date'].value);
+    tournament.leagues = event.target['tournament-form__leagues'].value;
 
-    tournament.isLink = isLink;
-    tournament.region = region;
-    tournament.title = title;
-    tournament.date = date;
-    tournament.leagues = leagues;
-    tournament
-    if (isLink) {
+    if (tournament.isLink) {
       // submit as link
-      var link = event.target['tournament-form__link'].value;
-      tournament.link = link;
-
-      Meteor.call('tournamentsCreate', tournament, function(err, res) {
-      });
+      tournament.link = event.target['tournament-form__link'].value;
     } else {
       // submit as tournament
-      var description = event.target['tournament-form__description'].value;
-      tournament.description = description;
-
-      Meteor.call('tournamentsCreate', tournament);
+      tournament.description = event.target['tournament-form__description'].value;
+      tournament.mode = event.target['tournament-form__mode'].value;
     }
+
+    if (Template.instance().state.get('editing')) {
+      var tournamentId = Template.instance().state.get('tournament')._id;
+      var tournamentSlug = Template.instance().state.get('tournament').slug;
+      console.log(tournament.title);
+      Meteor.call('tournamentsEdit', Template.instance().state.get('tournament')._id, tournament, function(err, res) {
+        if (err) {
+          $('#tournament-form__error').html(err.reason);
+        } else {
+          if (tournament.isLink) {
+            FlowRouter.go('/');
+          } else {
+            FlowRouter.go('/t/' + tournamentSlug + '/' + tournamentId);
+          }
+        }
+      });
+    } else {
+
+    }
+
+    Meteor.call('tournamentsCreate', tournament, function(err, res) {
+      if (err) {
+        $('#tournament-form__error').html(err.reason);
+      } else {
+        if (tournament.isLink) {
+          FlowRouter.go('/');
+        } else {
+          FlowRouter.go('/t/' + 'new' + '/' + res);
+        }
+      }
+    });
   }
 });

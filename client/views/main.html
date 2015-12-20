@@ -14,7 +14,9 @@
 <template name="main">
   {{> mainHeader}}
 
-  {{> Template.dynamic template=content}}
+  <div id="content-container">
+    {{> Template.dynamic template=content}}
+  </div>
 
   {{> mainFooter}}
 </template>

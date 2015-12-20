@@ -6,17 +6,18 @@ Template.tournamentListTools.helpers({
   showTools: function() {
     var ownerId = Template.instance().data.ownerId;
     var user = Meteor.user();
-    if (ownerId === user._id || Roles.userIsInRole(user._id, 'admin')) {
-      return true
-    } else {
-      return false;
+    if (user) {
+      if (ownerId === user._id || Roles.userIsInRole(user._id, 'admin')) {
+        return true
+      } else {
+        return false;
+      }
     }
   },
   editUrl: function() {
     var tournament = Template.instance().data.tournament;
     var tournamentSlug = tournament.slug;
     var tournamentId = tournament._id;
-    console.log(tournament);
     return '/t/' + tournamentSlug + '/' + tournamentId + '/edit';
   }
 });

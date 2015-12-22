@@ -6,6 +6,7 @@
 }
 
 .tournament-list__tools__btn {
+  z-index: 1000;
   color: $blue-grey-light;
   margin: 0 3px;
 }

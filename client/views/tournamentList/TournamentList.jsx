@@ -7,7 +7,7 @@ TournamentList = React.createClass({
   renderTournaments() {
     return this.props.tournaments.map((tournament) => {
       return (
-        <div className="col-xs-12 col-sm-6 col-lg-4">
+        <div key={tournament._id} className="col-xs-12 col-sm-6 col-lg-4">
           <TournamentListed tournament={tournament} />
         </div>
       );

@@ -14,59 +14,61 @@ TournamentListed = React.createClass({
   render() {
     return (
       <div>
+        <TournamentListTools
+          tournament={this.props.tournament} />
         <a className="tournament-list__link"
-          href={this.props.tournament.isLink ? this.getLink : ''}
+          href={this.props.tournament.isLink ? this.props.tournament.link : this.getLink()}
           target={this.props.tournament.isLink ? '_blank' : ''}>
           <div className="card tournament-list__card">
-            <TournamentListTools
-              tournament={this.props.tournament} />
             <h3 className="tournament-list__title">{this.props.tournament.title}</h3>
             <table>
-              <tr>
-                <td className="tournament-list__td">
-                  Platform:
-                </td>
-                <td>
-                  {this.props.tournament.isLink ? 'Remote' : 'Tournaments'}
-                </td>
-              </tr>
-              <tr>
-                <td className="tournament-list__td">
-                  Start in:
-                </td>
-                <td>
-                  {moment(this.props.tournament.date).fromNow()}
-                </td>
-              </tr>
-              <tr>
-                <td className="tournament-list__td">
-                  Date:
-                </td>
-                <td className="tournament-list__td">
-                  {moment(this.props.tournament.date).format('LLL')}
-                </td>
-              </tr>
-              <tr>
-                <td className="tournament-list__td">
-                  Server:
-                </td>
-                <td className="tournament-list__td">
-                  {this.props.tournament.region}
-                </td>
-              </tr>
-              <tr>
-                <td className="tournament-list__td">
-                  Participants:
-                </td>
-                <td className="tournament-list__td">
-                  {/*this.props.tournament.isLink ? 'N/A' : this.props.tournament.participants.length*/}
-                </td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td className="tournament-list__td">
+                    Platform:
+                  </td>
+                  <td>
+                    {this.props.tournament.isLink ? 'Remote' : 'Tournaments'}
+                  </td>
+                </tr>
+                <tr>
+                  <td className="tournament-list__td">
+                    Start in:
+                  </td>
+                  <td>
+                    {moment(this.props.tournament.date).fromNow()}
+                  </td>
+                </tr>
+                <tr>
+                  <td className="tournament-list__td">
+                    Date:
+                  </td>
+                  <td className="tournament-list__td">
+                    {moment(this.props.tournament.date).format('LLL')}
+                  </td>
+                </tr>
+                <tr>
+                  <td className="tournament-list__td">
+                    Server:
+                  </td>
+                  <td className="tournament-list__td">
+                    {this.props.tournament.region}
+                  </td>
+                </tr>
+                <tr>
+                  <td className="tournament-list__td">
+                    Participants:
+                  </td>
+                  <td className="tournament-list__td">
+                    {/*this.props.tournament.isLink ? 'N/A' : this.props.tournament.participants.length*/}
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </a>
         <div className="modal fade" id={'modal-delete-' + this.props.tournament._id}
-          tabindex="-1" role="dialog" aria-labelledby={'delete-' + this.props.tournament._id}>
+          tabIndex="-1" role="dialog" aria-labelledby={'delete-' + this.props.tournament._id}>
           <div className="modal-dialog" role="document">
             <div className="modal-content">
               <div className="modal-header">

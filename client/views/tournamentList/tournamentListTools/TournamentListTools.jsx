@@ -4,7 +4,7 @@ TournamentListTools = React.createClass({
   },
 
   openDeleteModal() {
-    $('#modal-delete-' + Template.instance().data.tournament._id).modal({show: true, backdrop: false});
+    $('#modal-delete-' + this.props.tournament._id).modal({show: true, backdrop: false});
   },
 
   render() {
@@ -23,7 +23,7 @@ TournamentListTools = React.createClass({
             data-placement="bottom"
             title="Delete"
             onClick={this.openDeleteModal}>
-            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+            <span className="glyphicon glyphicon-trash" aria-hidden="true"></span>
           </a>
         </div>
       );

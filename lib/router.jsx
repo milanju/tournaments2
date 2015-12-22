@@ -4,7 +4,7 @@ FlowRouter.route('/', {
     BlazeLayout.render('main', {content: 'home'});
   }
   */
-  action: function() {
+  action() {
     ReactLayout.render(MainLayout, {content: <Home />});
   }
 });
@@ -15,20 +15,30 @@ FlowRouter.route('/register', {
     BlazeLayout.render('main', {content: 'register'});
   }
   */
-  action: function() {
+  action() {
     ReactLayout.render(MainLayout, {content: <Register />});
   }
 });
 
 FlowRouter.route('/h/:page', {
+  /*
   action: function() {
     BlazeLayout.render('main', {content: 'home'});
+  }
+  */
+  action() {
+    ReactLayout.render(MainLayout, {content: <Home />});
   }
 });
 
 FlowRouter.route('/users/:username', {
+  /*
   action: function() {
     BlazeLayout.render('main', {content: 'userProfile'});
+  }
+  */
+  action() {
+    ReactLayout.render(MainLayout, {content: <UserProfile />});
   }
 });
 
@@ -38,14 +48,19 @@ FlowRouter.route('/t/create', {
     BlazeLayout.render('main', {content: 'tournamentCreate'});
   }
   */
-  action: function() {
+  action() {
     ReactLayout.render(MainLayout, {content: <TournamentCreate />})
   }
 });
 
 FlowRouter.route('/t/:slug/:tournamentId', {
-  action: function() {
+  /*
+  action() {
     BlazeLayout.render('main', {content: 'tournamentView'});
+  }
+  */
+  action() {
+    ReactLayout.render(MainLayout, {content: <TournamentView />});
   }
 });
 
@@ -55,7 +70,7 @@ FlowRouter.route('/t/:slug/:tournamentId/edit', {
     BlazeLayout.render('main', {content: 'tournamentEdit'});
   }
   */
-  action: function() {
+  action() {
     ReactLayout.render(MainLayout, {content: <TournamentEdit />});
   }
 })

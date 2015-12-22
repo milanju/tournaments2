@@ -23,11 +23,11 @@ Home = React.createClass({
     return data;
   },
 
-  /*<TournamentPagination tournamentsCount={this.data.tournamentsCount} />*/
   render() {
     return (
       <div className="container">
-        {this.data.tournaments ? <TournamentList tournaments={this.data.tournaments} /> : 'Loading....' }
+        {this.data.tournaments ? <TournamentList tournaments={this.data.tournaments} /> : 'Loading....'}
+        {this.data.tournaments ? <TournamentPagination /> : ''}
       </div>
     );
   }

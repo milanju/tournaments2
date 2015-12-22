@@ -5,54 +5,56 @@
       {{> tournamentListTools ownerId=this.userId tournament=this}}
       <h3 class="tournament-list__title">{{this.title}}</h3>
       <table>
-        <tr>
-          <td class="tournament-list__td">
-            Platform:
-          </td>
-          <td>
-            {{#if isLink}}
-              Remote
-            {{else}}
-              Tournaments
-            {{/if}}
-          </td>
-        </tr>
-        <tr>
-          <td class="tournament-list__td">
-            Start in:
-          </td>
-          <td>
-            {{timeUntil this.date}}
-          </td>
-        </tr>
-        <tr>
-          <td class="tournament-list__td">
-            Date:
-          </td>
-          <td class="tournament-list__td">
-            {{formatDate this.date}}
-          </td>
-        </tr>
-        <tr>
-          <td class="tournament-list__td">
-            Server:
-          </td>
-          <td class="tournament-list__td">
-            {{this.region}}
-          </td>
-        </tr>
-        <tr>
-          <td class="tournament-list__td">
-            Participants:
-          </td>
-          <td class="tournament-list__td">
-            {{#if isLink}}
-              N/A
-            {{else}}
-              {{this.participants.length}}
-            {{/if}}
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td class="tournament-list__td">
+              Platform:
+            </td>
+            <td>
+              {{#if isLink}}
+                Remote
+              {{else}}
+                Tournaments
+              {{/if}}
+            </td>
+          </tr>
+          <tr>
+            <td class="tournament-list__td">
+              Start in:
+            </td>
+            <td>
+              {{timeUntil this.date}}
+            </td>
+          </tr>
+          <tr>
+            <td class="tournament-list__td">
+              Date:
+            </td>
+            <td class="tournament-list__td">
+              {{formatDate this.date}}
+            </td>
+          </tr>
+          <tr>
+            <td class="tournament-list__td">
+              Server:
+            </td>
+            <td class="tournament-list__td">
+              {{this.region}}
+            </td>
+          </tr>
+          <tr>
+            <td class="tournament-list__td">
+              Participants:
+            </td>
+            <td class="tournament-list__td">
+              {{#if isLink}}
+                N/A
+              {{else}}
+                {{this.participants.length}}
+              {{/if}}
+            </td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </a>

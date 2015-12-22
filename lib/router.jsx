@@ -1,6 +1,11 @@
 FlowRouter.route('/', {
+  /*
   action: function() {
     BlazeLayout.render('main', {content: 'home'});
+  }
+  */
+  action: function() {
+    ReactLayout.render(MainLayout, {content: <Home />});
   }
 });
 

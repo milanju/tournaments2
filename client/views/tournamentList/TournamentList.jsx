@@ -16,8 +16,8 @@ TournamentList = React.createClass({
 
   render() {
     return (
-      <div className="row">
-        {this.renderTournaments()}
+      <div className="row tournament-list">
+          {this.renderTournaments()}
       </div>
     );
   }

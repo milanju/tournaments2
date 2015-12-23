@@ -25,10 +25,14 @@ Home = React.createClass({
 
   render() {
     return (
-      <div className="container">
-        {this.data.tournaments ? <TournamentList tournaments={this.data.tournaments} /> : 'Loading....'}
-        {this.data.tournaments ? <TournamentPagination /> : ''}
-      </div>
+      <ReactTransitionGroup>
+        {this.data.tournaments ?
+          <div className="container" key="home">
+            <TournamentList tournaments={this.data.tournaments} />
+            <TournamentPagination />
+          </div> : <Loading />
+        }
+      </ReactTransitionGroup>
     );
   }
 });

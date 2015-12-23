@@ -7,7 +7,7 @@ $input-height-base: 32px;
 $brand-primary: #ef5350;
 $brand-secondary: #1a1d32;
 
-$background: #2e2f3a;
+$background: #151922;
 $dark-grey: #212121;
 $black-blue: #181a1f;
 $dark-blue: #1c1e24;
@@ -26,8 +26,9 @@ html {
 
 body {
   margin-bottom: 80px;
-  background-color: $background;
-  background-image: url('/img/stardust.png');
+  background-color: #120F24;
+  background-image: linear-gradient(to bottom, #120F24, #1F2347 100%);
+  background-attachment: fixed;
   color: #fff;
 }
 
@@ -35,9 +36,69 @@ textarea {
   resize: vertical;
 }
 
+@media (max-width: 967px) {
+  .container {
+    width: auto;
+  }
+}
+
+@media (min-width: 968px) {
+  .container {
+      width: 750px;
+  }
+}
+
+@media (min-width: 1192px) {
+  .container {
+      width: 970px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .wrapper {
   position: absolute;
   width: 100%;
+}
+
+.main-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.main-content {
+  position: asbolute;
+  top: 60px;
+}
+
+.content-wrapper {
+  background-color: $background;
+  position: absolute;
+  top: 60px;
+  left: 200px;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  overflow-y: auto;
+}
+
+.content-container {
+  position: relative;
 }
 
 .card {
@@ -82,9 +143,39 @@ textarea {
   color: $brand-danger;
 }
 
+// example transition
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
 // custom imports
+@import 'Loading/Loading';
 @import 'mainFooter/mainFooter';
 @import 'mainHeader/mainHeader';
+@import 'SideMenu/SideMenu';
+@import 'Login/Login';
 @import 'tournamentListed/tournamentListed';
 @import 'tournamentList/tournamentList';
 @import 'tournamentList/tournamentListTools/tournamentListTools';

@@ -1,7 +1,15 @@
 .navbar {
-  background-color: #181a1f;
+  position: fixed;
+  top: 0;
+  left: 200px;
+  right: 0;
+  height: 60px;
+  background-color: #120F24;
+  background-image: linear-gradient(to right, #120F24, #1F2347 100%);
+  border: 0;
   border-radius: 0;
   font-weight: 600;
+  z-index: 10;
 }
 
 .navbar li a:hover, .navbar li a:focus {

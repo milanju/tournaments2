@@ -1,0 +1,17 @@
+.loading-splash {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #231a1d;
+  height: auto;
+  width: auto;
+  -webkit-animation: colorFade 1s ease-out;
+  pointer-events: none;
+}
+
+@-webkit-keyframes colorFade {
+  from {background-color: #1c2334;}
+  to {background-color: #231a1d;}
+}

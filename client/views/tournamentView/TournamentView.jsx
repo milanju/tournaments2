@@ -7,31 +7,41 @@ TournamentView = React.createClass({
     var handle = Meteor.subscribe('tournament', tournamentId);
     if (handle.ready()) {
       data.tournament = Tournaments.findOne(tournamentId);
+      data.page = Session.get('TournamentView');
     }
     return data;
   },
 
-  render() {
-    if (this.data.tournament) {
-      return (
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-12 col-sm-6 col-lg-4">
-              <TournamentListed tournament={this.data.tournament} />
-            </div>
-            <div className="col-xs-12 col-sm-6 col-lg-8">
-              User CP
-            </div>
-          </div>
-          <div className="card">
-            <div className="card__heading">{this.data.tournament.title}</div>
-          </div>
-        </div>
-      );
-    } else {
-      return (
-        <div>Loading...</div>
-      )
+  componentDidMount() {
+    Session.set('TournamentView', 'info');
+  },
+
+  renderView() {
+    var page = this.data.page;
+
+    if (page === 'info') {
+      return 'info';
     }
+
+    if (page === 'participants') {
+      return 'participants';
+    }
+
+    if (page === 'bracket') {
+      return 'bracket';
+    }
+  },
+
+  render() {
+      return (
+        <ReactTransitionGroup>
+          {this.data.tournament ?
+            <div className="container" key="view">
+              {this.renderView()}
+            </div> :
+            <Loading />
+          }
+        </ReactTransitionGroup>
+      );
   }
 });

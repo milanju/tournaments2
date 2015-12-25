@@ -32,6 +32,10 @@ body {
   color: #fff;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 textarea {
   resize: vertical;
 }
@@ -60,7 +64,9 @@ textarea {
   }
 }
 
-
+.error {
+  color: $brand-danger;
+}
 
 .row {
   margin-left: 0;
@@ -170,6 +176,16 @@ textarea {
   opacity: 1;
   transition: opacity .5s ease-in;
 }
+
+.content-wrapper,
+.navbar {
+  transition: all .2s ease-out;
+}
+
+.side-menu, .sidebar-toggle {
+  transition: all .3s ease-out;
+}
+
 // custom imports
 @import 'Loading/Loading';
 @import 'mainFooter/mainFooter';

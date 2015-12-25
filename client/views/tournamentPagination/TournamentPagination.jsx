@@ -1,5 +1,6 @@
 TournamentPagination = React.createClass({
-  paginateLeft() {
+  paginateLeft(event) {
+    event.preventDefault();
     var page = FlowRouter.getParam('page');
     if (page) {
       FlowRouter.go('/h/' + (parseInt(page) - 1));
@@ -8,7 +9,8 @@ TournamentPagination = React.createClass({
     }
   },
 
-  paginateRight() {
+  paginateRight(event) {
+    event.preventDefault();
     var page = FlowRouter.getParam('page');
     if (page) {
       FlowRouter.go('/h/' + (parseInt(page) + 1));
@@ -19,10 +21,10 @@ TournamentPagination = React.createClass({
 
   render() {
     return (
-      <div>
-        <a href="" onClick={this.paginateLeft}>Left</a>{' '}
-        <a href="" onClick={this.paginateRight}>Right</a>
-      </div>
+      <ul className="nav navbar-nav">
+        <li><a onClick={this.paginateLeft}>Left</a></li>
+        <li><a onClick={this.paginateRight}>Right</a></li>
+      </ul>
     );
   }
 });

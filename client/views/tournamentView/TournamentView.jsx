@@ -16,7 +16,7 @@ TournamentView = React.createClass({
     Session.set('TournamentView', 'info');
   },
 
-  renderView() {
+  renderView(event) {
     var page = this.data.page;
 
     if (page === 'info') {

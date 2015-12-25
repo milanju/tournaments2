@@ -1,3 +1,19 @@
+.sidebar-toggle {
+  position: absolute;
+  top: 12px;
+  left: 6px;
+}
+
+.sidebar-toggle-btn {
+  font-size: 30px;
+  color: #fff;
+}
+
+.sidebar-toggle-btn:hover,
+.sidebar-toggle-btn:focus {
+  color: #fff;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -13,11 +29,11 @@
 }
 
 .navbar li a:hover, .navbar li a:focus {
-  background-color: $background;
+  background-color: transparent;
 }
 
 .nav .open a, .nav .open a:hover, .nav .open a:focus {
-  background-color: $background;
+  background-color: transparent;
 }
 
 .nav .open .dropdown-menu a {

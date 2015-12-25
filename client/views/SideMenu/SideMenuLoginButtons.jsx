@@ -3,11 +3,15 @@ SideMenuLoginButtons = React.createClass({
     Session.set('showLogin', !Session.get('showLogin'));
   },
 
+  setPageLogin() {
+    this.props.setPage('login');
+  },
+
   render() {
     return (
-      <div className="side-menu__login">
-        <a href="" className="side-menu__login__action" onClick={this.openLogin}>Login</a>
-        <a href="" className="side-menu__login__action">Register</a>
+      <div className="side-menu__login-btns">
+        <a className="side-menu__login-btns__action" onClick={this.setPageLogin}>Login</a>
+        <a className="side-menu__login-btns__action">Register</a>
       </div>
     );
   }

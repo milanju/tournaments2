@@ -7,11 +7,15 @@ SideMenuLoginButtons = React.createClass({
     this.props.setPage('login');
   },
 
+  setPageRegister() {
+    this.props.setPage('register');
+  },
+
   render() {
     return (
       <div className="side-menu__login-btns">
         <a className="side-menu__login-btns__action" onClick={this.setPageLogin}>Login</a>
-        <a className="side-menu__login-btns__action">Register</a>
+        <a className="side-menu__login-btns__action" onClick={this.setPageRegister}>Register</a>
       </div>
     );
   }

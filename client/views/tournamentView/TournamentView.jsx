@@ -4,9 +4,13 @@ TournamentView = React.createClass({
   getMeteorData() {
     var data = {};
     var tournamentId = FlowRouter.getParam('tournamentId');
-    var handle = Meteor.subscribe('tournament', tournamentId);
-    if (handle.ready()) {
+    var tournamentHandle = Meteor.subscribe('tournament', tournamentId);
+    var participantsHandle = Meteor.subscribe('participants', tournamentId);
+    var playersHandle = Meteor.subscribe('players', tournamentId);
+    if (tournamentHandle.ready() && participantsHandle.ready()) {
       data.tournament = Tournaments.findOne(tournamentId);
+      data.participants = Participants.find({tournamentId: tournamentId}).fetch();
+      data.players = Players.find({tournamentId: tournamentId}).fetch();
       data.page = Session.get('TournamentView');
     }
     return data;
@@ -14,6 +18,14 @@ TournamentView = React.createClass({
 
   componentDidMount() {
     Session.set('TournamentView', 'info');
+  },
+
+  renderParticipants() {
+    return this.data.participants.map((participant) => {
+      return (
+        <li>{participant.name}</li>
+      );
+    });
   },
 
   renderView(event) {
@@ -24,7 +36,12 @@ TournamentView = React.createClass({
     }
 
     if (page === 'participants') {
-      return 'participants';
+      return (
+        <div>
+          <h1>Participants</h1>
+          <ul>{this.renderParticipants()}</ul>
+        </div>
+      );
     }
 
     if (page === 'bracket') {
@@ -37,6 +54,10 @@ TournamentView = React.createClass({
         <ReactTransitionGroup>
           {this.data.tournament ?
             <div className="container" key="view">
+              <TournamentViewUserCP
+                tournament={this.data.tournament}
+                participants={this.data.participants}
+                players={this.data.players} />
               {this.renderView()}
             </div> :
             <Loading />

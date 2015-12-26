@@ -136,7 +136,8 @@ TournamentForm = React.createClass({
             <select ref="region" id="tournament-form__region" className="form-control">
               <option checked={this.isRegion("Europe")}>Europe</option>
               <option checked={this.isRegion("Americas")}>Americas</option>
-              <option checked={this.isRegion("Korea")}>Korea</option>
+              <option checked={this.isRegion("Asia")}>Asia</option>
+              <option checked={this.isRegion("Southeast Asia")}>Southeast Asia</option>
             </select>
           </div>
         </div>

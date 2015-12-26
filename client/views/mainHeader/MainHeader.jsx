@@ -1,7 +1,5 @@
 MainHeader = React.createClass({
   renderNav() {
-    console.log('hello');
-    console.log(FlowRouter);
     if (FlowRouter.current().route.name === 'Home') {
       return <TournamentPagination />;
     }

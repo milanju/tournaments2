@@ -20,19 +20,22 @@ SideMenu = React.createClass({
   render() {
     var sideMenu;
     if (this.state.page === 'nav') {
-      sideMenu = <SideMenuNav setPage={this.setPage} />
+      sideMenu = <SideMenuNav key="SideMenuNav" setPage={this.setPage} />
     }
 
     if (this.state.page === 'login') {
-      sideMenu = <SideMenuLogin setPage={this.setPage} />
+      sideMenu = <SideMenuLogin key="SideMenuLogin" setPage={this.setPage} />
     }
 
     if (this.state.page === 'register') {
-      sideMenu = <SideMenuRegister />
+      sideMenu = <SideMenuRegister key="SideMenuRegister" setPage={this.setPage}/>
     }
+
     return (
       <div className="side-menu">
-        {sideMenu}
+        <ReactTransitionGroup>
+          {sideMenu}
+        </ReactTransitionGroup>
       </div>
     );
   }

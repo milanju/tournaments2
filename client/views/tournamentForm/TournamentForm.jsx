@@ -13,6 +13,7 @@ TournamentForm = React.createClass({
     tournament.date = '';
     tournament.leagues = '';
     tournament.description = '';
+    tournament.bos = [];
     if (this.props.editing) {
       tournament = this.props.tournament;
       if (this.props.tournament.isLink) {
@@ -20,6 +21,12 @@ TournamentForm = React.createClass({
       }
     }
     return {isLink, tournament};
+  },
+
+  componentDidMount() {
+    $(function() {
+      $('#tournament-form__date').datetimepicker();
+    });
   },
 
   isRegion(region) {
@@ -39,6 +46,31 @@ TournamentForm = React.createClass({
     this.setState({isLink: true});
   },
 
+  renderBos() {
+    var ro = 1;
+    return this.state.tournament.bos.map((bo) => {
+      ro *= 2;
+      return (
+        <div className="col-xs-12 col-sm-4 col-lg-3" key={'ro' + ro}>
+          <label>ro{ro}</label>
+          <input type="text" className="form-control" placeholder="Best of" ref={'boRo' + ro} />
+        </div>
+      );
+    });
+  },
+
+  addBo() {
+    var bos = this.state.tournament.bos;
+    bos.push({});
+    this.setState({'tournament.bos': bos});
+  },
+
+  removeBo() {
+    var bos = this.state.tournament.bos;
+    bos.pop();
+    this.setState({'tournament.bos': bos});
+  },
+
   handleSubmit(event) {
     event.preventDefault();
     var tournament = {};
@@ -53,6 +85,7 @@ TournamentForm = React.createClass({
       tournament.link = ReactDOM.findDOMNode(this.refs.link).value;
     } else {
       // submit as tournament
+      tournament.defaultBo = parseInt(ReactDOM.findDOMNode(this.refs.defaultBo).value);
       tournament.description = ReactDOM.findDOMNode(this.refs.description).value;
       tournament.mode = ReactDOM.findDOMNode(this.refs.mode).value;
     }
@@ -60,7 +93,7 @@ TournamentForm = React.createClass({
     if (this.props.editing) {
       var tournamentId = this.props.tournament._id;
       var tournamentSlug = this.props.tournament.slug;
-      Meteor.call('tournamentsEdit', tournamentId, tournament, (err, res) => {
+      Meteor.call('Tournaments.methods.edit', tournamentId, tournament, (err, res) => {
         if (err) {
           ReactDOM.findDOMNode(this.refs.error).innerHTML = err.reason;
         } else {
@@ -75,7 +108,7 @@ TournamentForm = React.createClass({
 
     }
 
-    Meteor.call('tournamentsCreate', tournament, (err, res) => {
+    Meteor.call('Tournaments.methods.create', tournament, (err, res) => {
       if (err) {
         ReactDOM.findDOMNode(this.refs.error).innerHTML = err.reason;
       } else {
@@ -129,6 +162,29 @@ TournamentForm = React.createClass({
               </select>
             </div>
           </div>
+        }
+        {!this.state.isLink ?
+          <div className="form-group">
+            <label className="col-sm-2 control-label">Best ofs</label>
+            <div className="col-sm-10">
+              <div className="row">
+                <div className="col-xs-12 col-sm-4 col-lg-3">
+                  <label>Default</label>
+                  <input type="text" className="form-control" ref="defaultBo" placeholder="Best of" />
+                </div>
+                {this.renderBos()}
+                <div className="col-xs-12 col-sm-4 col-lg-3">
+                  <label>Add/Remove bo</label><br />
+                  <a className="btn btn-info" onClick={this.addBo}>
+                    <span className="glyphicon glyphicon-plus"></span>
+                  </a>{' '}
+                  <a className="btn btn-danger" onClick={this.removeBo}>
+                    <span className="glyphicon glyphicon-minus"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div> : ''
         }
         <div className="form-group">
           <label htmlFor="tournament-form__region" className="col-sm-2 control-label">Region</label>

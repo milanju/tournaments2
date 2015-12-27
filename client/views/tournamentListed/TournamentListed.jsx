@@ -8,7 +8,7 @@ TournamentListed = React.createClass({
   },
 
   deleteTournament() {
-    Meteor.call('tournamentsDelete', this.props.tournament._id);
+    Meteor.call('Tournaments.methods.delete', this.props.tournament._id);
   },
 
   render() {

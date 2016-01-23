@@ -117,7 +117,7 @@ TournamentViewUserCP = React.createClass({
             if (this.props.user.profile.accounts[this.props.tournament.region.toLowerCase()]) {
               cpState = <div>Join Tournament</div>
             } else {
-              cpState = <div>Add account for region</div>
+              cpState = <TournamentViewAddAccount region={this.props.tournament.region.toLowerCase()} />
             }
           }
         }
@@ -132,6 +132,51 @@ TournamentViewUserCP = React.createClass({
       <div className="card">
         <h4 className="card__headline">User CP</h4>
         {cpState}
+      </div>
+    );
+  }
+});
+
+TournamentViewAddAccount = React.createClass({
+  propTypes: {
+    region: React.PropTypes.string.isRequired
+  },
+
+  getInitialState() {
+    return {disabled: false};
+  },
+
+  handleSubmit(event) {
+    event.preventDefault();
+    if (!this.state.disabled) {
+      var name = ReactDOM.findDOMNode(this.refs.name).value;
+
+      this.setState({disabled: true});
+      Meteor.call('Meteor.users.methods.setAccount', this.props.region, name, (err, res) => {
+        if (err) {
+          this.setState({disabled: false});
+          ReactDOM.findDOMNode(this.refs.error).innerHTML = err.error;
+        } else {
+          // success
+          // add some feedback?
+        }
+      });
+    }
+  },
+
+  render() {
+    var btnState = this.state.disabled ? 'disabled' : '';
+    return (
+      <div>
+        <p>Add Account for Region</p>
+        <form className="form-inline" onSubmit={this.handleSubmit}>
+          <div className="form-group">
+            <input type="text" className="form-control" placeholder="Name#123" ref="name" />
+          </div>
+          {' '}
+          <button type="submit" className={'btn btn-primary ' + btnState}>Add Account</button>
+        </form>
+        <p className="error" ref="error"></p>
       </div>
     );
   }

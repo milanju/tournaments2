@@ -64,7 +64,7 @@ TournamentView = React.createClass({
     if (this.data.tournament) {
       var isSiteAdmin = Roles.userIsInRole(this.data.user ? this.data.user._id : undefined, 'admin');
       var isTournamentAdmin = _.contains(this.data.tournament.admins, this.data.user ? this.data.user._id : undefined);
-      var isTournamentOwner = this.data.user ? this.data.user._id : undefined === this.data.tournament.userId;
+      var isTournamentOwner = (this.data.user ? this.data.user._id : undefined) === this.data.tournament.userId;
       var isAdmin = isSiteAdmin || isTournamentAdmin || isTournamentOwner;
     }
 

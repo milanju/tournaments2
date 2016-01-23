@@ -7,7 +7,8 @@ TournamentViewUserCP = React.createClass({
   },
 
   isParticipating() {
-    var userId = this.props.user ? this.props.user_id : undefined;
+    console.log(this.props.participants);
+    var userId = this.props.user ? this.props.user._id : undefined;
     // loop through participants, if user is found return true
     for (var i = 0; i < this.props.participants.length; i++) {
       if (userId === this.props.participants[i].userId) {
@@ -18,7 +19,7 @@ TournamentViewUserCP = React.createClass({
   },
 
   isPlayer() {
-    var userId = this.props.user ? this.props.user_id : undefined;
+    var userId = this.props.user ? this.props.user._id : undefined;
     // loop through players, if user is found return true
     for (var i = 0; i < this.props.players.length; i++) {
       if (userId === this.props.players[i].userId) {
@@ -29,7 +30,7 @@ TournamentViewUserCP = React.createClass({
   },
 
   getPlayer() {
-    var userId = this.props.user ? this.props.user_id : undefined;
+    var userId = this.props.user ? this.props.user._id : undefined;
     // loop through players. First occurrence is most advanced.
     for (var i = 0; i < this.props.players.length; i++) {
       if (userId === this.props.players[i].userId) {
@@ -67,7 +68,7 @@ TournamentViewUserCP = React.createClass({
   },
 
   isCheckedIn() {
-    var userId = this.props.user ? this.props.user_id : undefined;
+    var userId = this.props.user ? this.props.user._id : undefined;
     for (var i = 0; i < this.props.participants.length; i++) {
       if (userId === this.props.participants[i].userId) {
         if (this.props.participants[i].checkedIn) {
@@ -107,7 +108,7 @@ TournamentViewUserCP = React.createClass({
             } else if (this.props.tournament.status === 'checkin') {
               cpState = <div>Check in now!</div>;
             } else {
-              cpState = <div>Waiting for checkin!</div>;
+              cpState = <div>You are signed up for this Tournament. Waiting for checkin!</div>;
             }
           }
         } else {
@@ -115,8 +116,10 @@ TournamentViewUserCP = React.createClass({
             cpState = <div>Tournament is running</div>;
           } else {
             if (this.props.user.profile.accounts[this.props.tournament.region.toLowerCase()]) {
-              cpState = <div>Join Tournament</div>
+              // user has an account, offer to join
+              cpState = <TournamentViewJoin tournamentId={this.props.tournament._id}/>
             } else {
+              // user needs to create an account within tournaments region
               cpState = <TournamentViewAddAccount region={this.props.tournament.region.toLowerCase()} />
             }
           }
@@ -132,6 +135,40 @@ TournamentViewUserCP = React.createClass({
       <div className="card">
         <h4 className="card__headline">User CP</h4>
         {cpState}
+      </div>
+    );
+  }
+});
+
+TournamentViewJoin = React.createClass({
+  propTypes: {
+    tournamentId: React.PropTypes.string.isRequired
+  },
+
+  getInitialState() {
+    return {disabled: false};
+  },
+
+  joinTournament() {
+    if (!this.state.disabled) {
+      this.setState({disabled: true});
+      Meteor.call('Tournaments.methods.join', this.props.tournamentId, (err, res) => {
+        if (err) {
+          console.log(err);
+          this.setState({disabled: false});
+          ReactDOM.findDOMNode(this.refs.error).innerHTML = err.reason;
+        } else {
+          // success
+        }
+      });
+    }
+  },
+
+  render() {
+    return (
+      <div>
+        <button className="btn btn-primary" onClick={this.joinTournament}>Join Tournament</button>
+        <p className="error" ref="error"></p>
       </div>
     );
   }
@@ -155,7 +192,7 @@ TournamentViewAddAccount = React.createClass({
       Meteor.call('Meteor.users.methods.setAccount', this.props.region, name, (err, res) => {
         if (err) {
           this.setState({disabled: false});
-          ReactDOM.findDOMNode(this.refs.error).innerHTML = err.error;
+          ReactDOM.findDOMNode(this.refs.error).innerHTML = err.reason;
         } else {
           // success
           // add some feedback?

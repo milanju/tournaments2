@@ -19,7 +19,7 @@
   top: 0;
   left: 200px;
   right: 0;
-  height: 60px;
+  height: 50px;
   background-color: #120F24;
   background-image: linear-gradient(to right, #120F24, #1F2347 100%);
   border: 0;
@@ -47,4 +47,8 @@
 
 .icon-bar {
   background-color: #fff;
+}
+
+.navbar-nav li a.logo {
+  padding: 6px 0 7px 0;
 }

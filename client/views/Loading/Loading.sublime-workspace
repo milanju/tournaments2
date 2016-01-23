@@ -1,0 +1,444 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"func",
+				"function〔keyword〕"
+			],
+			[
+				"fun",
+				"function	(main.js)"
+			],
+			[
+				"findD",
+				"findDOMNode"
+			],
+			[
+				"create",
+				"createTournament	(router.js)"
+			],
+			[
+				"tour",
+				"tournamentPagination (obj) [C]"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"Template",
+				"Template   (fn)  [E]"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"last_filter": "wrap",
+		"selected_items":
+		[
+			[
+				"wrap",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"select",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"auto",
+				"Autoprefix CSS"
+			],
+			[
+				"latex",
+				"Build With: LaTeX"
+			],
+			[
+				"latexing",
+				"LaTeXing: Open PDF"
+			],
+			[
+				"latexing ",
+				"LaTeXing: Rebuild Cache"
+			],
+			[
+				"package list",
+				"Package Control: List Packages"
+			],
+			[
+				"beauti",
+				"Javascript Beautify"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 324.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/milan/webdev/pharma/src2/src/js/main.js",
+		"/C/Users/milan/webdev/pharma/src2/src/partials/footer.handlebars",
+		"/C/Users/milan/webdev/pharma/src2/src/index.handlebars",
+		"/C/Users/milan/webdev/pharma/src2/src/medsupplies.handlebars",
+		"/C/Users/milan/webdev/pharma/src2/src/about.handlebars",
+		"/C/Users/milan/webdev/pharma/src2/src/es/contact.handlebars",
+		"/C/Users/milan/webdev/pharma/src2/src/es/medsupplies.handlebars",
+		"/C/Users/milan/webdev/pharma/src2/src/es/products.handlebars",
+		"/C/Users/milan/webdev/pharma/src2/src/products.handlebars",
+		"/C/Users/milan/webdev/pharma/src2/src/es/about.handlebars",
+		"/C/Users/milan/webdev/pharma/src2/gulpfile.js",
+		"/C/Users/milan/webdev/pharma/src2/src/contact.handlebars",
+		"/C/Users/milan/webdev/pharma/src2/src/esp/index.handlebars",
+		"/C/Users/milan/webdev/pharma/src2/src/es/index.handlebars",
+		"/C/Users/milan/webdev/pharma/src2/dist/pharma/products.html",
+		"/C/Users/milan/webdev/pharma/src2/src/partials/header.handlebars",
+		"/C/Users/milan/webdev/pharma/src2/dist/pharma/esp/index.html",
+		"/C/Users/milan/webdev/pharma/src2/dist/pharma/index.html",
+		"/C/Users/milan/webdev/pharma/src2/src/styles/style.css",
+		"/C/Users/milan/webdev/pharma/src/js/main.js",
+		"/C/Users/milan/webdev/pharma/src2/dist/index.html",
+		"/C/Users/milan/webdev/pharma/src/products.html",
+		"/C/Users/milan/webdev/pharma/src/medsupplies.html",
+		"/C/Users/milan/webdev/pharma/src/styles/style.css",
+		"/C/Users/milan/webdev/pharma/src/styles/products.html",
+		"/C/Users/milan/webdev/practice/gulp-firster/gulpfile.js",
+		"/C/Users/milan/webdev/practice/gulp-firster/package.json",
+		"/C/Users/milan/webdev/practice/gulp-firster/src/first.js",
+		"/C/Users/milan/webdev/practice/gulp-firster/src/second.js",
+		"/C/Users/milan/webdev/tournaments/client/views/mainHeader/MainHeader.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentForm/TournamentForm.jsx",
+		"/C/Users/milan/webdev/tournaments/lib/collections/users.js",
+		"/C/Users/milan/webdev/tournaments/client/views/userProfile/UserProfile.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/SideMenu/SideMenuRegister.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/Loading/Loading.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/main.scss",
+		"/C/Users/milan/webdev/tournaments/client/views/SideMenu/SideMenu.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/SideMenu/SideMenuNav.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/SideMenu/SideMenuLoginButtons.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/SideMenu/SideMenuLogin.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/SideMenu/_SideMenu.scss",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentView/TournamentView.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/mainLayout.jsx",
+		"/C/Users/milan/webdev/tournaments/lib/collections/participants.js",
+		"/C/Users/milan/webdev/tournaments/client/views/userProfile/_userProfile.scss",
+		"/C/Users/milan/webdev/tournaments/server/publish.js",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentView/TournamentViewUserCP.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/SideMenu/SideMenuUser.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/TournamentCreate/TournamentCreate.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/TournamentNavigation/TournamentNavigation.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/mainHeader/_mainHeader.scss",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentPagination/TournamentPagination.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/home/home.html",
+		"/C/Users/milan/webdev/tournaments/lib/router.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/Loading/_Loading.scss",
+		"/C/Users/milan/webdev/tournaments/client/views/home/Home.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentListed/tournamentListed.html",
+		"/C/Users/milan/webdev/tournaments/client/helpers/timeUntil.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentListed/TournamentListed.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/userBar/LoginForm.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/register/Register.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/mainFooter/mainFooter.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/main.html",
+		"/C/Users/milan/webdev/tournaments/client/views/userBar/UserBar.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/userBar/UserInfo.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/loginForm/loginForm.html",
+		"/C/Users/milan/webdev/tournaments/client/views/loginForm/loginForm.jsx",
+		"/C/Users/milan/webdev/tournaments/client/mainLayout.jsx",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentView/tournamentView.html",
+		"/C/Users/milan/webdev/tournaments/client/views/main.js",
+		"/C/Users/milan/webdev/tournaments/lib/collections/tournaments.js",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentForm/tournamentForm.html",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentForm/tournamentForm.js",
+		"/C/Users/milan/webdev/tournaments/lib/router.js",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentList/tournamentListTools/tournamentListTools.html",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentList/tournamentListTools/tournamentListTools.js",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentEdit/tournamentEdit.html",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentView/tournamentView.js",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentList/tournamentList.html",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentList/_tournamentList.scss",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentList/tournamentList.js",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentListed/_tournamentListed.scss",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentListed/tournamentListed.js",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentView/_tournamentView.scss",
+		"/C/Users/milan/webdev/tournaments/client/views/createTournament/createTournament.html",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentList/tournamentListTools/_tournamentListTools.scss",
+		"/C/Users/milan/webdev/tournaments/client/views/createTournament/createTournament.js",
+		"/C/Users/milan/webdev/tournaments/client/views/mainHeader/mainHeader.html",
+		"/C/Users/milan/webdev/tournaments/server/seed.js",
+		"/C/Users/milan/webdev/tournaments/client/views/userProfile/userProfile.html",
+		"/C/Users/milan/webdev/tournaments/client/views/register/register.html",
+		"/C/Users/milan/webdev/tournaments/client/views/register/_register.scss",
+		"/C/Users/milan/webdev/tournaments/client/views/userProfile/userProfile.js",
+		"/C/Users/milan/webdev/tournaments/client/views/mainFooter/mainFooter.html",
+		"/C/Users/milan/webdev/tournaments/client/views/mainFooter/_mainFooter.scss",
+		"/C/Users/milan/webdev/tournaments/client/loginForm/loginForm.html",
+		"/C/Users/milan/webdev/tournaments/client/views/register/register.js",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentPagination/_tournamentPagination.scss",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentPagination/tournamentPagination.html",
+		"/C/Users/milan/webdev/tournaments/README.md",
+		"/C/Users/milan/webdev/tournaments/client/views/tournamentPagination/tournamentPagination.js",
+		"/C/Users/milan/webdev/tournaments/client/views/home/home.js",
+		"/C/Users/milan/webdev/tournaments/client/helpers/moment.js",
+		"/C/Users/milan/webdev/tournaments/client/helpers/general.js",
+		"/C/Users/milan/webdev/tournaments/client/tournamentPagination/_tournamentPagination.scss",
+		"/C/Users/milan/webdev/tournaments/client/tournamentPagination/tournamentPagination.js",
+		"/C/Users/milan/webdev/tournaments/client/tournamentPagination/tournamentPagination.html",
+		"/C/Users/milan/webdev/tournaments/client/helpers/helpers.js",
+		"/C/Users/milan/webdev/bracket-blaze-react-angular/README.md",
+		"/C/Users/milan/webdev/bracket-blaze-react-angular/client/index.html",
+		"/C/Users/milan/webdev/bracket-blaze-react-angular/client/style.css",
+		"/C/Users/milan/webdev/bracket-blaze-react-angular/client/tournament/tournament.html",
+		"/C/Users/milan/webdev/bracket-blaze-react-angular/lib/collections/tournaments.js",
+		"/C/Users/milan/webdev/bracket-blaze-react-angular/client/tournament/tournament.js",
+		"/C/Users/milan/webdev/bracket-blaze-react-angular/client/tournament/bracket/bracket.js",
+		"/C/Users/milan/webdev/bracket-blaze-react-angular/server/bootstrap.js",
+		"/C/Users/milan/webdev/bracket-blaze-react-angular/bracket-blaze-react-angular.js",
+		"/C/Users/milan/webdev/angular-test/scripts/hello-world.js",
+		"/C/Users/milan/webdev/angular-test/styles/main.css",
+		"/C/Users/milan/webdev/php/barcodes-php-angular/README.md",
+		"/C/MAMP/conf/apache/httpd.conf",
+		"/C/Users/milan/webdev/php/barcodes-php-angular/spinner.css",
+		"/C/Users/milan/webdev/php/th-functions/script.php",
+		"/C/Users/milan/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/milan/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/milan/swtdev/latextemplate/labtemplate.tex",
+		"/C/Users/milan/Dropbox/Apps/drawio/pdR02.html",
+		"/C/Users/milan/webdev/leadsnare/blessed_day (1)/webfontkit-20151120-103153/stylesheet.css"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"contact",
+			"submit",
+			"ACCOLATE\n                ACEPROMAZINE\n                ACTEMRA\n                ADVAIR\n                ADVAIR DISKUS\n                AFATANIB\n                AFREZZA\n                ALPRAZOLAM\n                AMANTADINE\n                AMBIEN\n                AMBIEN CR\n                AMITRAZ\n                AMITRIPTYLINE\n                AMLODIPINE\n                AMOXICILLIN\n                ANORO\n                ANTIVENIN\n                ANZEMET\n                APAQUEL\n                APIDRA\n                APOMORPHINE\n                ARAVA\n                ARIMIDEXANASTROZOLE\n                ARNUITY\n                ASMANEX\n                ATACAND\n                ATENOLOL\n                ATIPAMEZOLE\n                AUVI-Q\n                AVALIDE\n                AVANDIA\n                AVAPRO\n                AVASTIN\n                AVELOX\n                AVODART\n                BACTROBAN\n                BACTROBAN CREAM\n                BECONASE AQ\n                BELSOMRA\n                BENAZEPRIL\n                BOLDENONE\n                BONIVA\n                BONVIVA\n                BREO\n                BRICANYL\n                BRILINTA\n                BUPRENORPHINE\n                BUSCAPAN\n                BUSCAPINA\n                BUTORPHANOL\n                BYDUREONEXENATIDE\n                BYETTAEXENATIDE\n                CANCIDAS\n                CARPROFEN\n                CARTICEL\n                CASODEX\n                CEFOVECIN\n                CEFPODOXIME\n                CELESTONE\n                CELLCEPT\n                CEPHALEXIN\n                CHLORAMPHENICOL\n                CIMETIDINE\n                CIPROFLOXACIN\n                CLAMOXYQUINE\n                CLARINEX\n                CLARINEX-D\n                CLAVASEPTIN\n                CLAVULANIC\n                CLENBUTEROL\n                CLINDAMYCIN\n                CLOLAR\n                CLOMIPRAMINE\n                COMBIVENT\n                COMVAX\n                COREG CR\n                COSEQUIN\n                COSOPT\n                COSOPT PF\n                COZAAR\n                CRESTORROSUVASTATIN\n                CRIXIVAN\n                CUBICIN\n                CUBICINDAPTOMYCIN\n                CYPROHEPTADINE\n                DALIRESPROFLUMILAST\n                DERACOXIB\n                DEXAMETHASONE\n                DIAZEPAM\n                DICHLOROPHENE\n                DIFICID\n                DIPHENHYDRAMINE\n                DIPRIVANPROPOFOL\n                DIPROLENE\n                DIPROLENE AF\n                DIPROSPAN\n                DOXYCYCLINE\n                DUAC\n                DUAKLIR\n                DULERA\n                EKLIRA\n                ELITEK\n                ELOCON\n                ELOXATIN\n                EMEND\n                EMLAEMLA\n                ENALAPRIL\n                ENROFLOXACIN\n                ENTEREG\n                EPIVIR-HBV\n                EQUINE\n                FABIOR\n                FASLODEXFULVESTRANT\n                FENBENDAZOLE\n                FERRLECIT\n                FLOVENT\n                FLUMIST\n                FLUNIXIN\n                FOLLISTIM\n                FOLLISTIM AQ\n                FORADIL\n                FORXIGADAPAGLIFLOZIN\n                FOSAMAX\n                FOSAMAX PLUS\n                FUROSEMIDE\n                FUZEON\n                GABAPENTIN\n                GARDASIL\n                GARDASIL9\n                GAZYVA\n                GAZYVARO\n                GILOTRIF\n                GIOTRIF\n                GLUCOSAMINE\n                GLYCOPYRROLATE\n                GRASTEK\n                HECTOROL\n                HERCEPTIN\n                HYDROMORPHONE\n                HYDROXYZINE\n                HYZAAR\n                IBGSTAR\n                IMDUR\n                IMITREX\n                IMPLANON\n                INCRUSE\n                INTEGRILIN\n                INTRON\n                INVANZ\n                INVIRASE\n                IRESSAGEFITINIB\n                ISENTRESS\n                ISOXSUPRINE\n                IVERMECTIN\n                JALYN\n                JANUMET\n                JANUMET XR\n                JANUVIA\n                JEVTANA\n                KETAMINE\n                KETEK\n                KETOPROFEN\n                KEVATRIL\n                KEYTRUDA\n                KOMBIGLYZE\n                KOMBOGLYZESAXAGLIPTIN\n                KYTRIL\n                LAMICTAL\n                LANTUS\n                LEGOO\n                LEUKINE\n                LEVAMEZOLE\n                LEVETIRACETAM\n                LIPTRUZET\n                LIQUID\n                LOSEC\n                LOTRISONE\n                LOVAZA\n                LOVENOX\n                LUCENTIS\n                LUFENURON\n                LYNPARZAOLAPARIB\n                MALARONE\n                MARBOFLOXACIN\n                MAROPITANT\n                MAXALT\n                MAXALT-MLT\n                MEDETOMIDINE\n                MELOXICAM\n                MEPRON\n                MERREM/MERONEMMEROPENEM\n                METACAM\n                METHIMAZOLE\n                METOCLOPRAMIDE\n                METRONIDAZOLE\n                MEVACOR\n                MILBEMYCIN\n                MIRTAZAPINE\n                M-M-R\n                MOVANTIK/MOVENTIGNALOXEGOL\n                MOXIFLOXACIN\n                MOZOBIL\n                MULTAQ\n                NAROPINROPIVACAINE\n                NASONEX\n                NEOMYCIN\n                NEXIUMESOMEPRAZOLE\n                NEXPLANON\n                NITARSONE\n                NITENPYRAM\n                NITRO-DUR\n                NITROSCANATE\n                NITROXYNIL\n                NOLVADEX\n                NOXAFIL\n                NUVARING\n                NYSTATIN\n                OFEV\n                OFLOXACIN\n                OMEPRAZOLE\n                ONGLYZASAXAGLIPTIN\n                OXIBENDAZOLE\n                OXIS\n                OXYMORPHONE\n                PEGASYS\n                PEGINTRON\n                PENTOBARBITAL\n                PHENOBARBITAL\n                PHENYLBUTAZONE\n                PIMOBENDAN\n                PIRLIMYCIN\n                PLAVIX\n                PLENDIL\n                PNEUMOVAX\n                PONAZURIL\n                POTIGA\n                PRALUENT\n                PRAZIQUANTEL\n                PREDNISOLONE\n                PREDNISONE\n                PREGNYL\n                PRIMAXIN\n                PRINIVIL\n                PRODOLINA\n                PROPECIA\n                PROQUAD\n                PROSCAR\n                PROVENTIL\n                PULMICORT\n                PULMOZYME\n                PYRANTEL\n                QUADRIDERM\n                RAGWITEK\n                REBETOL\n                RECOMBIVAX\n                RELENZA\n                REMERON\n                REMERONSOLTAB\n                RENAGEL\n                RENVELA\n                REQUIP\n                RHINOCORTBUDESONIDE\n                ROBENACOXIB\n                ROTATEQ\n                ROXARSONE\n                RYTHMOL\n                SELAMECTIN\n                SELOKEN\n                SENTINEL\n                SEPRAFILM\n                SEREVENT\n                SEROQUEL\n                SINEMET\n                SINGULAIR\n                SIVEXTRO\n                SKLICE\n                SOLOXINE\n                SORIATANE\n                SORILUX\n                SPIRIVA\n                STREPTOMYCIN\n                STROMECTOL\n                SUCRALFATE\n                SULFASALAZINE\n                SYLATRON\n                SYMBICORT\n                SYNAGISPALIVIZUMAB\n                SYNULOX\n                SYNVISC\n                SYNVISCONE\n                TAMIFLU\n                TANZEUM\n                TARCEVA\n                TAXOTERE\n                TELAZOL\n                TEMODAR\n                TENORMIN\n                THEOPHYLLINE\n                THIABENDAZOLE\n                THIOSTREPTON\n                TIOVA\n                TOUJEO\n                TRIAMCINOLONE\n                TRILOSTANE\n                TRIMETHOPRIM\n                TRUSOPT\n                TYLOSIN\n                UNIMAXFELODIPINE-RAMIPRIL\n                VALCYTE\n                VAQTA\n                VARIVAX\n                VARLATEF\n                VENTOLIN\n                VERAMYST\n                VICTRELIS\n                VIMOVONAPROXEN\n                VYTORIN\n                XELODA\n                XENICAL\n                XIGDUO\n                XIGDUODAPAGLIFLOZIN\n                XOVOLTIB\n                XYLOCAINELIDOCAINE\n                YOHIMBINE\n                ZALTRAP\n                ZEMURON\n                ZERBAXA\n                ZESTRILLISINOPRIL\n                ZETIA\n                ZINFOROCEFTAROLINE\n                ZIOPTAN\n                ZOCOR\n                ZOLADEXGOSERELIN\n                ZOLINZA\n                ZOMIG\n                ZONTIVITY\n                ZOSTAVAX",
+			"_id",
+			"create",
+			"admins",
+			"account",
+			"console",
+			"cónsole",
+			"findDOMNode",
+			"korea",
+			"login",
+			"{{",
+			"\\bfor\\b",
+			"\\bclass\\b",
+			"\\bfor\\b",
+			"for",
+			"styles",
+			"styles/",
+			"styles",
+			"/styles",
+			"console.log",
+			"create-tournament",
+			"createTournament",
+			"create-tournament",
+			"player",
+			"spacer",
+			"environment",
+			"create",
+			"CD,pdLogin",
+			"6px",
+			"hr",
+			"this.options.custom",
+			"h2",
+			";\n",
+			"center",
+			"FFF",
+			";\n",
+			"content",
+			"console.log",
+			"png",
+			"webkit",
+			"volume",
+			"font",
+			"wrapperFadeIn",
+			"ffont",
+			"Übungsgrupp",
+			"Übunggruppe",
+			"mo",
+			"name",
+			"Abbreviation",
+			"UserPanel",
+			"Abbreviation",
+			"Abbrev",
+			"loginAsAdmin",
+			"url",
+			"json",
+			"}\n",
+			"home",
+			".home",
+			"contact",
+			"projects-headline",
+			"src=\"/",
+			"src=/",
+			"      <",
+			"font-siz",
+			"font",
+			"{\n",
+			"position:",
+			"relative",
+			"ctrl-up",
+			"after",
+			"ctrl-up",
+			"line",
+			"path"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Loading.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 244.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

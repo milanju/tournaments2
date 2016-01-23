@@ -5,7 +5,7 @@ TournamentNavigation = React.createClass({
 
   render() {
     return (
-      <ul>
+      <ul className="nav navbar-nav">
         <li><a onClick={this.showPage.bind(this, 'info')}>Info</a></li>
         <li><a onClick={this.showPage.bind(this, 'participants')}>Participants</a></li>
         <li><a onClick={this.showPage.bind(this, 'bracket')}>Bracket</a></li>

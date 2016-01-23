@@ -1,12 +1,13 @@
 TournamentViewUserCP = React.createClass({
   propTypes: {
+    user: React.PropTypes.object,
     tournament: React.PropTypes.object.isRequired,
     participants: React.PropTypes.array.isRequired,
     players: React.PropTypes.array.isRequired
   },
 
   isParticipating() {
-    var userId = Meteor.userId();
+    var userId = this.data.user ? this.data.userId : undefined;
     // loop through participants, if user is found return true
     for (var i = 0; i < this.props.participants.length; i++) {
       if (userId === this.props.participants[i].userId) {
@@ -17,7 +18,7 @@ TournamentViewUserCP = React.createClass({
   },
 
   isPlayer() {
-    var userId = Meteor.userId();
+    var userId = this.data.user ? this.data.userId : undefined;
     // loop through players, if user is found return true
     for (var i = 0; i < this.props.players.length; i++) {
       if (userId === this.props.players[i].userId) {
@@ -28,7 +29,7 @@ TournamentViewUserCP = React.createClass({
   },
 
   getPlayer() {
-    var userId = Meteor.userId();
+    var userId = this.data.user ? this.data.userId : undefined;
     // loop through players. First occurrence is most advanced.
     for (var i = 0; i < this.props.players.length; i++) {
       if (userId === this.props.players[i].userId) {
@@ -66,7 +67,7 @@ TournamentViewUserCP = React.createClass({
   },
 
   isCheckedIn() {
-    var userId = Meteor.userId();
+    var userId = this.data.user ? this.data.userId : undefined;
     for (var i = 0; i < this.props.participants.length; i++) {
       if (userId === this.props.participants[i].userId) {
         if (this.props.participants[i].checkedIn) {
@@ -85,7 +86,7 @@ TournamentViewUserCP = React.createClass({
     // if tournament is not over
     if (this.props.tournament.status !== 'finished') {
       // if user is logged in
-      if (Meteor.user()) {
+      if (this.data.user) {
         // if user is participant
         if (this.isParticipating()) {
           if (this.props.tournament.status === 'running') {
@@ -113,7 +114,7 @@ TournamentViewUserCP = React.createClass({
           if (this.props.tournament.status === 'running') {
             cpState = <div>Tournament is running</div>;
           } else {
-            if (Meteor.user().profile.accounts[this.props.tournament.region.toLowerCase()]) {
+            if (this.data.user.profile.accounts[this.props.tournament.region.toLowerCase()]) {
               cpState = <div>Join Tournament</div>
             } else {
               cpState = <div>Add account for region</div>
@@ -128,7 +129,10 @@ TournamentViewUserCP = React.createClass({
     }
 
     return (
-      <div>{cpState}</div>
+      <div className="card">
+        <h4 className="card__headline">User CP</h4>
+        {cpState}
+      </div>
     );
   }
 });
